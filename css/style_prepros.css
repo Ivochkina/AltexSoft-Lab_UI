@@ -1,8 +1,6 @@
 @import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
 @import url(owl.carousel.min.css);
 @import url(owl.theme.default.min.css);
-@import url(animate.min.css);
-@import url(hover.css);
 @import url(style.css);
 @font-face {
   font-family: 'Georgia';
@@ -197,8 +195,7 @@
       border: solid 3px #a7c353;
       display: inline-block; }
   .main .content {
-    padding: 45px 0 40px;
-    background-color: #ffffff; }
+    padding: 45px 0 40px; }
     .main .content .content-wrap {
       display: flex;
       border-top: solid 1px #e2e2e2;
@@ -235,12 +232,14 @@
         font-size: 13px;
         line-height: 18px; }
       .main .content .content-wrap .content-link {
-        display: block;
+        display: inline-block;
         color: #a7c353;
         text-decoration: none;
         font-size: 13px;
         line-height: 13px;
         text-align: end; }
+        .main .content .content-wrap .content-link:hover {
+          color: #313131; }
       .main .content .content-wrap .content-servis__block {
         display: flex;
         margin-bottom: 20px; }
@@ -378,7 +377,7 @@
           resize: none; }
           .main .contacts .about-company .contacts-item__company .input :focus {
             outline-style: none;
-            outline-width: 0px !important; }
+            outline-width: 0 !important; }
         .main .contacts .about-company .contacts-item__company .button {
           padding: 10px;
           border: none;

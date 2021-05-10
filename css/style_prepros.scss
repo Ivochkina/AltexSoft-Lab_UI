@@ -29,10 +29,11 @@
 
 
 .main {
-background-color: red;
+
   @include main;
 
   .header {
+
 
     border-top: solid 5px $colorGreen;
     background-color: $backgroundLight;
