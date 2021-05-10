@@ -1,10 +1,9 @@
 @import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
-@import "animate.min.css";
-@import "hover.css";
-@import "style.css";
 @import "variables";
+@import "style.css";
+
 @font-face {
   font-family: 'Georgia';
   src: url('../fonts/Georgia.eot');
@@ -30,6 +29,7 @@
 
 
 .main {
+background-color: red;
   @include main;
 
   .header {
@@ -67,7 +67,6 @@
       .header-nav__item {
         list-style: none;
         display: inline-block;
-        //margin-left: 43px;
         cursor: pointer;
 
         &:hover {
@@ -297,7 +296,6 @@
 .content{
 
   padding: 45px 0 40px;
-  background-color: $backgroundLight;
 
   .content-wrap{
     @include max-screen(768px){
@@ -305,8 +303,6 @@
       flex-wrap: wrap;
 
     }
-
-
     display: flex;
     border-top: solid 1px #e2e2e2;
     @include wrap;
@@ -346,13 +342,19 @@
       line-height: 18px;
     }
     .content-link {
-      display: block;
+      display: inline-block;
       color: $colorGreen;
       text-decoration: none;
       font-size: 13px;
       line-height: 13px;
       text-align: end;
+      &:hover{
+        color: #313131;
+      }
+
+
     }
+
     .content-servis__block{
       display: flex;
       margin-bottom: 20px;
@@ -363,10 +365,9 @@
       }
     }
     .wrap-block{
-
       margin-left: 20px;
-
     }
+
     .client-title{
       font-size: 16px;
       line-height: 16px;
@@ -375,7 +376,7 @@
       &:before{
         display: inline-block;
         color: $colorTextFooter;
-       content: url("../images/quotes.png");
+        content: url("../images/quotes.png");
         position: relative;
         margin-right: 15px;
         top: 15px;
@@ -469,9 +470,6 @@
 
 
         .icon-social {
-
-
-
           border-bottom: solid 1px $colorBorder;
           padding-bottom: 7px;
           text-decoration: none;
@@ -555,20 +553,22 @@
       .contacts-item__company {
         width: 225px;
 
-        .user-input {
-          width: 100%;
-          background-color: #383838;
-          border: none;
-          margin-bottom: 10px;
-          padding: 10px;
-          border-radius: 5px;
-          resize: none;
 
-          :focus {
-            outline-style: none;
-            outline-width: 0 !important;
+          .input {
+            width: 100%;
+            background-color: #383838;
+            border: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            resize: none;
+
+            :focus {
+              outline-style: none;
+              outline-width: 0 !important;
+            }
           }
-        }
+
 
         .button {
           padding: 10px;
