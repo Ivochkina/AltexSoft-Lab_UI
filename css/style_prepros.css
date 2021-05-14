@@ -16,10 +16,15 @@
   * ul {
     list-style: none; }
 
-.main {
+.main-content {
   max-width: 1200px;
   margin: auto;
-  font-family: "Georgia"; }
+  font-family: "Georgia";
+  background-color: #313131; }
+
+.main {
+  max-width: 960px;
+  margin: auto; }
   .main .header {
     border-top: solid 5px #a7c353;
     background-color: #ffffff; }
@@ -48,8 +53,10 @@
         cursor: pointer; }
         .main .header .header-wrap .header-nav__item:hover {
           height: 100%;
-          background-color: #a7c353;
-          color: red; }
+          background-color: #a7c353; }
+        .main .header .header-wrap .header-nav__item:active {
+          background-color: papayawhip;
+          color: white; }
       .main .header .header-wrap .header-nav__link {
         display: block;
         text-transform: uppercase;
@@ -150,12 +157,11 @@
       background-color: #313131;
       color: #a7c353;
       position: absolute;
-      right: 13%;
+      right: 3%;
       top: 39%;
-      content: ">";
-      font-size: 36px;
-      line-height: 44px;
-      font-weight: 700; }
+      content: url("../images/right.png");
+      font-size: 44px;
+      line-height: 44px; }
     .main .slider .owl-nav .owl-prev::before {
       width: 50px;
       height: 50px;
@@ -166,12 +172,11 @@
       background-color: #313131;
       color: #a7c353;
       position: absolute;
-      left: 13%;
+      left: 3%;
       top: 39%;
-      content: "<";
-      font-size: 36px;
-      line-height: 44px;
-      font-weight: 700; }
+      content: url("../images/left.png");
+      font-size: 44px;
+      line-height: 44px; }
     .main .slider .owl-dots {
       text-align: center;
       outline: none !important; }
@@ -195,6 +200,7 @@
       border: solid 3px #a7c353;
       display: inline-block; }
   .main .content {
+    background-color: #ffffff;
     padding: 45px 0 40px; }
     .main .content .content-wrap {
       display: flex;
@@ -240,6 +246,8 @@
         text-align: end; }
         .main .content .content-wrap .content-link:hover {
           color: #313131; }
+        .main .content .content-wrap .content-link:active {
+          color: purple; }
       .main .content .content-wrap .content-servis__block {
         display: flex;
         margin-bottom: 20px; }
@@ -305,8 +313,8 @@
             text-decoration: none; }
             .main .contacts .about-company .contacts-item__company .company-contacts .company-link_email:hover {
               color: #ffffff; }
-              .main .contacts .about-company .contacts-item__company .company-contacts .company-link_email:hover:active {
-                color: red; }
+            .main .contacts .about-company .contacts-item__company .company-contacts .company-link_email:active {
+              color: purple; }
         .main .contacts .about-company .contacts-item__company .company-hours .company-text .company-text:first-child {
           font-weight: bold; }
       .main .contacts .about-company .contacts-item__company {
@@ -324,6 +332,8 @@
             margin-bottom: 23px; }
             .main .contacts .about-company .contacts-item__company .icon-social .icon-social_text:hover {
               color: #ffffff; }
+            .main .contacts .about-company .contacts-item__company .icon-social .icon-social_text:active {
+              color: purple; }
           .main .contacts .about-company .contacts-item__company .icon-social .social-link {
             border-bottom: solid 1px #3a3a3a;
             padding-bottom: 7px;
@@ -339,6 +349,8 @@
             .main .contacts .about-company .contacts-item__company .icon-social .social-link:hover {
               background-color: #ffffff;
               color: #a7c353; }
+            .main .contacts .about-company .contacts-item__company .icon-social .social-link:active {
+              color: purple; }
       .main .contacts .about-company .contacts-item__company {
         width: 225px;
         margin-right: 20px; }
@@ -362,9 +374,12 @@
           color: #a7c353;
           font-size: 12px;
           line-height: 14px;
-          display: block; }
+          display: block;
+          cursor: pointer; }
           .main .contacts .about-company .contacts-item__company .article-link:hover {
             color: #ffffff; }
+          .main .contacts .about-company .contacts-item__company .article-link:active {
+            color: purple; }
       .main .contacts .about-company .contacts-item__company {
         width: 225px; }
         .main .contacts .about-company .contacts-item__company .input {
@@ -375,9 +390,22 @@
           padding: 10px;
           border-radius: 5px;
           resize: none; }
-          .main .contacts .about-company .contacts-item__company .input :focus {
-            outline-style: none;
-            outline-width: 0 !important; }
+          .main .contacts .about-company .contacts-item__company .input:focus {
+            outline: none;
+            border: solid 1px white; }
+          .main .contacts .about-company .contacts-item__company .input:focus-within {
+            background-color: #759418;
+            color: white; }
+        .main .contacts .about-company .contacts-item__company input {
+          outline: none; }
+        .main .contacts .about-company .contacts-item__company ::-webkit-input-placeholder {
+          color: #989898; }
+        .main .contacts .about-company .contacts-item__company ::-moz-placeholder {
+          color: #989898; }
+        .main .contacts .about-company .contacts-item__company :-moz-placeholder {
+          color: #989898; }
+        .main .contacts .about-company .contacts-item__company :-ms-input-placeholder {
+          color: #989898; }
         .main .contacts .about-company .contacts-item__company .button {
           padding: 10px;
           border: none;
@@ -385,7 +413,16 @@
           border-radius: 7px;
           cursor: pointer; }
           .main .contacts .about-company .contacts-item__company .button:hover {
-            background-color: #ffffff; }
+            background-color: #ffffff;
+            color: #a7c353; }
+          .main .contacts .about-company .contacts-item__company .button:active {
+            color: white;
+            background-color: palevioletred;
+            outline: none !important; }
+          .main .contacts .about-company .contacts-item__company .button:focus {
+            outline: none !important; }
+        .main .contacts .about-company .contacts-item__company button::-moz-focus-inner {
+          border: 0 !important; }
   .main .footer {
     background-color: #313131; }
     .main .footer .footer-wrap {
